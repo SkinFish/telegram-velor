@@ -5,6 +5,8 @@ CherryPy==13.1.0
 idna==2.6
 more-itertools==4.0.1
 portend==2.2
+pypiwin32==220
+pyTelegramBotAPI==3.5.1
 pytz==2017.3
 requests==2.7.0
 six==1.11.0
