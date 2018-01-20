@@ -3,7 +3,7 @@ import telebot
 import requests
 from time import sleep
 import datetime
-
+sleep(3000)
 bot = telebot.TeleBot(config.token)
 now = datetime.datetime.now()
 types = telebot.types
