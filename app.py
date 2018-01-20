@@ -1,16 +1,18 @@
 import config
 import telebot
 import requests
-from telebot import types
 from time import sleep
 import datetime
 
 bot = telebot.TeleBot(config.token)
 now = datetime.datetime.now()
+types = telebot.types
+logger = telebot.logger
 
 @bot.message_handler(commands=["help"])
 def greeting(message):
     bot.send_message(message.chat.id, "Привет, видимо ты всё ещё не знаком с моим списком команд \nВот он: \n/help - Возвращает список доступных команд \n/googlefornoobs - Для тех кто не умеет пользоваться гуглом \n/ytvideo - Возвращает ссылку на видео YouTube по названию")
+
 @bot.message_handler(commands=["googlefornoobs"])
 def gfn(message):
     msgCommand = message.text
